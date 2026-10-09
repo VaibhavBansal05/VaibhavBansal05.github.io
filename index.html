@@ -248,6 +248,7 @@ footer{
       <a href="#publications">Research</a>
       <a href="#achievements">Achievements</a>
       <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="menu-btn" id="menubtn" aria-label="Toggle menu">☰</button>
@@ -262,9 +263,9 @@ footer{
   <div class="eyebrow"><span class="dot"></span> Autonomous Systems &amp; Machine Learning</div>
   <h1>Vaibhav Krishna<br>Bansal</h1>
   <p class="tagline">
-    I build <strong>perception and planning systems for autonomous robots</strong> — multi-modal
-    sensor fusion, learned trajectory planners, and real-time deep learning pipelines that run on
-    constrained edge hardware.
+    I build <strong>perception and planning systems for autonomous robots</strong> — from
+    ROS 2 mobile-robot exploration and vision-guided UAV control to trajectory planners with
+    spatio-temporal constraints.
   </p>
   <p class="hero-sub">B.Tech Information Technology · Manipal Institute of Technology · 2023–2027</p>
   <div class="cta">
@@ -275,8 +276,8 @@ footer{
   </div>
 
   <div class="stats reveal">
-    <div class="stat"><b>3</b><span>peer-reviewed papers</span></div>
-    <div class="stat"><b>Top 50</b><span>e-Yantra, IIT Bombay</span></div>
+    <div class="stat"><b>3</b><span>research presentations</span></div>
+    <div class="stat"><b>Top 20</b><span>e-Yantra, IIT Bombay</span></div>
     <div class="stat"><b>9th</b><span>ICUAS 2025, international</span></div>
     <div class="stat"><b>IISc</b><span>HIRO Lab research intern</span></div>
   </div>
@@ -290,29 +291,25 @@ footer{
       <p class="lead">
         I'm an undergraduate researcher working at the intersection of <strong>robotics, computer
         vision, and machine learning</strong>. Most of my work is about closing the gap between a
-        learned model and a robot that actually has to fly: state estimation without GPS, detection
-        pipelines that hold their frame rate on an embedded board, and planners that respect hard
-        temporal constraints.
+        learned model and a robot operating in the real world: navigation in unknown environments,
+        vision-based UAV control, and planners that account for strict temporal constraints.
       </p>
       <p class="lead">
         At <strong>AeroMIT</strong> I lead the autonomous drone research subsystem, where I architect
-        real-time RGBD and 360° LiDAR fusion pipelines for state estimation and environment surveying
-        in GPS-denied zones, and build ROS2/MAVLink autonomy stacks validated in Gazebo before they
-        touch hardware.
+        work on UAV perception, navigation, and control for challenging, GPS-denied environments.
+        I develop ROS 2 / MAVLink workflows and Gazebo simulations for perception-driven autonomy.
       </p>
       <p class="lead">
-        At the <strong>HIRO Lab, IISc Bangalore</strong>, I worked on a JAX-based Model-Based
-        Diffusion planner that enforces differentiable Signal Temporal Logic constraints for
-        non-holonomic robots — scoring thousands of candidate trajectories in parallel on GPU and
-        pairing the offline planner with an online receding-horizon controller for reactive obstacle
-        avoidance.
+        At the <strong>HIRO Lab, IISc Bengaluru</strong>, I developed a Model-Based Diffusion planner
+        for a non-holonomic robot. Differentiable Signal Temporal Logic objectives guided obstacle
+        safety, goal reaching, and time-constrained waypoints across offline and online
+        receding-horizon planning architectures.
       </p>
       <p class="lead">
-        I care about systems that are measurable: cross-validation schemes that don't leak, planners
-        with provable constraint satisfaction, and pipelines whose latency budget you can actually
-        write down. That instinct produced my first-author paper at <strong>IC3-2026</strong>, where
-        embedding kinematic constraints into a gradient-boosting solver beat every unconstrained
-        baseline on cross-vehicle generalization.
+        I care about measurable systems: cross-validation across unseen rockets, consistent robot
+        maps, and control loops that meet their timing targets. My first-author work at
+        <strong>IC3 2026</strong> reports physics-informed flight-phase classification from
+        GPS-derived telemetry.
       </p>
     </div>
     <aside class="about-card">
@@ -323,7 +320,7 @@ footer{
         <div class="kv"><dt>Institute</dt><dd>MIT Manipal (MAHE)</dd></div>
         <div class="kv"><dt>Graduating</dt><dd>2027</dd></div>
         <div class="kv"><dt>Focus</dt><dd>UAV autonomy · Perception · Planning</dd></div>
-        <div class="kv"><dt>Languages</dt><dd>English (C2), Hindi</dd></div>
+        <div class="kv"><dt>Methods</dt><dd>SLAM · State estimation · STL planning</dd></div>
       </dl>
     </aside>
   </div>
@@ -338,22 +335,19 @@ footer{
       <h3>Head of Autonomous Drone Research</h3>
       <p class="tl-meta"><span class="org">AeroMIT</span> · Manipal Institute of Technology · Jan 2024 – Present</p>
       <ul class="bullets">
-        <li>Lead a subsystem of researchers focused on data-driven perception, computer vision, and autonomous navigation pipelines for complex environments.</li>
-        <li>Architect real-time multi-modal data fusion pipelines (RGBD, 360° LiDAR) for robust state estimation and environment surveying in GPS-denied zones.</li>
-        <li>Develop and optimize deep learning pipelines (YOLO-based models, OpenCV) for high-speed object detection and 3D scene reconstruction on edge devices.</li>
-        <li>Design and implement ROS2-based autonomy stacks integrated with MAVLink for both simulated and physical UAV platforms.</li>
-        <li>Build and validate UAV behaviours in Gazebo and RViz, enabling safe iteration before hardware deployment.</li>
-        <li>Contribute to autonomous drone competitions — SAE AeroThon, ICUAS 2025, and the International Space Drone Challenge — covering system integration and mission-level autonomy.</li>
+        <li>Lead a student research subsystem working on autonomous UAV perception, navigation, and control in challenging and GPS-denied environments.</li>
+        <li>Develop ROS 2 / MAVLink-integrated UAV workflows and Gazebo simulations.</li>
+        <li>Apply OpenCV and 3D scene understanding to perception-driven autonomy and system testing.</li>
       </ul>
     </div>
 
     <div class="tl-item">
       <h3>Research Intern</h3>
-      <p class="tl-meta"><span class="org">Human Interaction and Robotics (HIRO) Laboratory</span> · IISc Bangalore · May 2026 – Jul 2026</p>
+      <p class="tl-meta"><span class="org">Human Interaction and Robotics (HIRO) Lab</span> · IISc Bengaluru · May–Jul 2026</p>
       <ul class="bullets">
-        <li>Developed a JAX-based Model-Based Diffusion (MBD) planner enforcing differentiable Signal Temporal Logic (STL) constraints for a non-holonomic robot under strict waypoint time-window requirements.</li>
-        <li>Scored parallel candidate trajectories per diffusion step via <code>jax.vmap</code> for GPU-parallelized optimization.</li>
-        <li>Designed a two-phase Global + Short-Horizon RHC architecture, combining an offline diffusion planner with an online reactive controller for real-time obstacle avoidance.</li>
+        <li>Developed a Model-Based Diffusion planner for a non-holonomic robot, using differentiable Signal Temporal Logic (STL) robustness to optimize obstacle safety, goal reaching, and strict spatio-temporal waypoint constraints.</li>
+        <li>Designed an offline global planner with online receding-horizon control (RHC), and a fully online RHC planner for partial observability, dynamic obstacles, and incremental environment memory.</li>
+        <li>Implemented time-aware local planning that brakes or loiters to meet waypoint arrival windows while refining multiple control sequences under STL objectives.</li>
       </ul>
     </div>
 
@@ -367,18 +361,17 @@ footer{
 
     <article class="card">
       <div class="card-top">
-        <h3>AGV Perception &amp; Autonomous Exploration Stack</h3>
+        <h3>Autonomous Mobile Robot Exploration &amp; Mapping</h3>
         <a class="icon-link" href="https://github.com/VaibhavBansal05/Agv_Perception" target="_blank" rel="noopener">code ↗</a>
       </div>
-      <p class="tl-meta">ROS 2 Humble · SLAM · Nav2 · Sensor fusion</p>
+      <p class="tl-meta">ROS 2 · Gazebo · Python · URDF/SDF</p>
       <ul class="bullets">
-        <li>Full autonomy stack for a differential-drive AGV: the robot spawns in an unknown labyrinth, builds a map online with SLAM Toolbox, and drives itself toward frontier goals until coverage is complete — no human in the loop.</li>
-        <li>Real-time 3D perception and sensor fusion with YOLOv8, resolving detections into real-world coordinates for downstream planning.</li>
-        <li>Diagnosed a control-loop collapse to 1.3 Hz caused by an RGB-D → laserscan conversion with only 60° FOV; re-architected around a 360° GPU LiDAR (8 m range) and restored stable 20 Hz operation.</li>
-        <li>Traced map corruption to a wheel-separation parameter mismatch (0.4 m declared vs 0.36 m actual chassis) producing odometry shear — a single-parameter fix that repaired mapping accuracy outright.</li>
-        <li>Tuned costmap inflation and robot radius to true physical limits so Nav2 could plan through corridors it had previously marked lethal; validated on a 7.5-minute fully autonomous mapping run.</li>
+        <li>Built a differential-drive autonomy pipeline with online SLAM, frontier-based exploration, and navigation through an unknown labyrinth; demonstrated a 7.5-minute autonomous mapping run.</li>
+        <li>Replaced a CPU-heavy RGB-D-to-laserscan pipeline with 360° GPU LiDAR, recovering control-loop frequency from 1.3 Hz to 20 Hz.</li>
+        <li>Diagnosed distorted SLAM maps to a wheel-separation mismatch (0.40 m configuration versus 0.36 m actual geometry); corrected odometry and recovered consistent mapping.</li>
+        <li>Tuned costmaps for narrow corridors.</li>
       </ul>
-      <div class="tags"><span class="tag">ROS 2</span><span class="tag">Gazebo Ignition</span><span class="tag">SLAM Toolbox</span><span class="tag">Nav2 / DWB</span><span class="tag">YOLOv8</span><span class="tag">Python</span><span class="tag">C++</span></div>
+      <div class="tags"><span class="tag">ROS 2</span><span class="tag">Gazebo</span><span class="tag">SLAM</span><span class="tag">Frontier exploration</span><span class="tag">GPU LiDAR</span><span class="tag">Python</span></div>
     </article>
 
     <article class="card">
@@ -386,46 +379,31 @@ footer{
         <h3>Sounding Rocket Flight-Phase Classification</h3>
         <a class="icon-link" href="https://github.com/VaibhavBansal05/soundingrocket_phase_classification" target="_blank" rel="noopener">code ↗</a>
       </div>
-      <p class="tl-meta">Physics-informed ML · Basis of the <strong>IC3-2026</strong> paper · 7 EuRoC flights</p>
+      <p class="tl-meta">Physics-informed ML · Basis of the <strong>IC3 2026</strong> paper · evaluated on seven rockets</p>
       <ul class="bullets">
         <li>Classifies flight phase — boost, coast, apogee, descent, landed — from GPS telemetry alone, with no barometric pressure sensor available.</li>
-        <li><strong>PhaseNet</strong>: multi-scale temporal convolutional encoders with cross-scale attention fusion and a physics-informed constraint loss that rules out kinematically impossible predictions.</li>
-        <li><strong>PI-XGB</strong>: custom-objective XGBoost embedding penalty matrices directly into the gradient and Hessian to enforce energy conservation and valid state transitions.</li>
-        <li>Best mean macro-F1 of <strong>0.838 (±0.112)</strong> under Leave-One-Rocket-Out cross-validation, ahead of stock XGBoost (0.830) and Random Forest (0.823); macro-F1 chosen so the majority descent class cannot mask failures on safety-critical boost and apogee.</li>
-        <li>13 engineered kinematic and statistical features; SHAP and LIME used for model explainability.</li>
+        <li><strong>PI-XGB</strong>: a physics-penalized objective that reached <strong>0.838 ± 0.112</strong> mean macro-F1 versus 0.830 for baseline XGBoost under Leave-One-Rocket-Out cross-validation.</li>
+        <li><strong>PhaseNet</strong>: multi-scale temporal convolutions, attention fusion, and physics-informed losses, with streaming inference and early apogee prediction.</li>
       </ul>
-      <div class="tags"><span class="tag">TensorFlow / Keras</span><span class="tag">XGBoost</span><span class="tag">scikit-learn</span><span class="tag">Bi-LSTM</span><span class="tag">SHAP / LIME</span><span class="tag">Pandas</span></div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Keras</span><span class="tag">XGBoost</span><span class="tag">Physics-informed ML</span><span class="tag">Streaming inference</span></div>
     </article>
 
     <article class="card">
       <div class="card-top">
-        <h3>DocSentry — Multi-Agent AI Security Framework</h3>
+        <h3>Autonomous Precision Landing Drone</h3>
+        <a class="icon-link" href="https://github.com/VaibhavBansal05/Precision_Hover_Drone" target="_blank" rel="noopener">code ↗</a>
       </div>
-      <p class="tl-meta">LLM agents · Retrieval · PII masking</p>
+      <p class="tl-meta">OpenCV · ArUco · Proportional control</p>
       <ul class="bullets">
-        <li>Multi-agent framework using Llama models and FAISS vector retrieval for scalable sensitive-data detection and PII masking across text datasets.</li>
-        <li>Evaluated against a 9-parameter framework covering classification accuracy and backend robustness.</li>
+        <li>Built an autonomous UAV sequence for takeoff, ArUco-marker detection, target alignment, and precision landing.</li>
+        <li>Implemented image-based visual servoing, converting marker-position error into real-time velocity commands using proportional feedback control.</li>
       </ul>
-      <div class="tags"><span class="tag">Llama</span><span class="tag">FAISS</span><span class="tag">Python</span><span class="tag">Multi-agent</span></div>
-    </article>
-
-    <article class="card">
-      <div class="card-top">
-        <h3>Flight Planning &amp; AI Weather Briefing System</h3>
-        <a class="icon-link" href="https://github.com/VaibhavBansal05/Hackspace" target="_blank" rel="noopener">code ↗</a>
-      </div>
-      <p class="tl-meta">Hackathon quarter-finalist · 48 hours, built from scratch</p>
-      <ul class="bullets">
-        <li>Route, fuel and safety-assessment tool for pilots, generating AI weather briefings from live aviation weather data.</li>
-        <li>Pulls official US Aviation Weather Center feeds and runs them through a Mistral-7B model for natural-language hazard assessment.</li>
-        <li>Serverless backend on Netlify functions with a dependency-free frontend and Chart.js visualizations.</li>
-      </ul>
-      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Mistral-7B</span><span class="tag">Netlify Functions</span><span class="tag">Chart.js</span></div>
+      <div class="tags"><span class="tag">UAV autonomy</span><span class="tag">OpenCV</span><span class="tag">ArUco</span><span class="tag">Visual servoing</span></div>
     </article>
 
   </div>
   <p class="lead" style="margin-top:22px;font-size:14.5px">
-    More work — computer vision fundamentals, exploratory data analysis, and competition code — on
+    More projects and competition code are available on
     <a href="https://github.com/VaibhavBansal05" target="_blank" rel="noopener">GitHub</a>.
   </p>
 </div></section>
@@ -439,29 +417,23 @@ footer{
       <h3>Physics-Informed Gradient Boosting and Explainable AI for Real-Time Sounding Rocket Phase Classification
         <span class="badge">Accepted · Presented</span></h3>
       <p class="authors"><strong>Vaibhav Krishna Bansal</strong>, Rudra Rajpurohit, Vedant Totla, Gogulamudi Pradeep Reddy, U. Shivani Sri Varshini</p>
-      <p class="venue">IC3-2026 — 18th International Conference on Contemporary Computing · JIIT Noida &amp; University of Florida · Aug 2026 · in press, IEEE Xplore</p>
+      <p class="venue">IC3 2026 · accepted and presented · reported as in press for IEEE Xplore</p>
       <p class="lead" style="margin-top:10px;font-size:14.6px">
-        First-author paper introducing <strong>PI-XGB</strong>, which embeds kinematic penalty matrices directly
-        into XGBoost's gradient and Hessian to suppress physically impossible flight-state transitions. Classifies
-        five flight phases from GPS telemetry alone — for vehicles carrying no barometric pressure sensor, removing
-        the conventional apogee signal used to trigger parachute deployment. Mean macro-F1 of <strong>0.838 ± 0.112</strong>
-        under strict Leave-One-Rocket-Out cross-validation across seven EuRoC flights, ahead of standard XGBoost
-        (0.830), Random Forest (0.823), Bi-LSTM (0.729) and SVM (0.713). SHAP and LIME confirm the models learn
-        aerodynamic decision boundaries rather than dataset artefacts.
+        First-author paper on physics-informed gradient boosting and explainable AI for classifying five
+        sounding-rocket flight phases from GPS-derived telemetry. PI-XGB reached <strong>0.838 ± 0.112</strong>
+        mean macro-F1 across seven rockets under Leave-One-Rocket-Out cross-validation, versus
+        <strong>0.830</strong> for baseline XGBoost.
       </p>
-      <p class="venue" style="margin-top:8px">Technically co-sponsored by the IEEE Computer Society · ~35% acceptance rate from ~915 submissions</p>
     </div>
 
     <div class="pub">
       <h3>Design and Multi-Faceted Validation of UAV Arm Clamps, Landing Gear and Motor Mounts via Generative Design in Autodesk Fusion 360
         <span class="badge">Accepted · Presented</span></h3>
       <p class="authors"><strong>Vaibhav Krishna Bansal</strong></p>
-      <p class="venue">SAE AeroCON 2026 · SAEINDIA · presented 4 June 2026, Day 1 technical session</p>
+      <p class="venue">SAE AeroCON 2026 · accepted and presented</p>
       <p class="lead" style="margin-top:10px;font-size:14.6px">
-        Sole-author paper on generative-design optimization of UAV arm clamps, motor mounts, and landing
-        gear for FFF 3D printing — targeting stress reduction, stiffness improvement, and
-        manufacturability-constrained design workflows in Autodesk Fusion 360. Presented in person at
-        the Day 1 technical session.
+        Sole-author paper on the design and validation of UAV arm clamps, landing gear, and motor
+        mounts using Autodesk Fusion 360.
       </p>
       <p><a href="https://drive.google.com/file/d/1O0YfGatfLOlcHceJXIlwrqVWDUmYsV-N/view?usp=sharing" target="_blank" rel="noopener">Read abstract ↗</a></p>
     </div>
@@ -470,25 +442,12 @@ footer{
       <h3>Bandwidth-Efficient Map Sharing in Multi-Robot SLAM Using Generative Models
         <span class="badge">Accepted · Poster</span></h3>
       <p class="authors">Prathiksha Rao, Vaibhav Krishna Bansal</p>
-      <p class="venue">CASML 2025 — Conference on AI, Systems and Machine Learning · IISc Bangalore</p>
+      <p class="venue">CASML 2025 · IISc Bengaluru · peer-reviewed, accepted for poster presentation</p>
       <p class="lead" style="margin-top:10px;font-size:14.6px">
-        Peer-reviewed and selected for poster presentation. Contributed to the design and evaluation of
-        a generative-model-based SLAM map compression pipeline for bandwidth-constrained multi-robot teams.
+        Research presentation on bandwidth-efficient sharing of multi-robot SLAM maps using
+        generative models.
       </p>
       <p><a href="https://drive.google.com/file/d/1EWFAw6U0OPYoT_0-2v_vcUPlamXhgDfQ/view?usp=sharing" target="_blank" rel="noopener">Read poster ↗</a></p>
-    </div>
-
-    <div class="pub">
-      <h3>Advanced Guidance, Control and State Estimation for Aerospace Vehicles and Autonomous Systems</h3>
-      <p class="authors">Two-week advanced lecture series · Indian Institute of Science (IISc), Bangalore</p>
-      <p class="venue">07–18 July 2025</p>
-      <p class="lead" style="margin-top:10px;font-size:14.6px">
-        Optimal control theory, model predictive control, dynamic programming, guidance and navigation,
-        state estimation (Kalman, Unscented and Particle Filters), robust and adaptive control, flight
-        dynamics, and nonlinear autopilot design. Lectures by Prof. Radhakant Padhi, Prof. Frank Allgöwer,
-        Prof. I. M. Ross, Prof. R. K. Yedavalli, and Dr. P. K. Menon.
-      </p>
-      <p><a href="https://drive.google.com/file/d/1Zd9uxKgEv7a1-rrgvHJYOVQwrc59dVdi/view?usp=sharing" target="_blank" rel="noopener">Certificate ↗</a></p>
     </div>
 
   </div>
@@ -499,31 +458,38 @@ footer{
   <div class="sec-head"><span class="sec-num">05</span><h2>Competitions &amp; Achievements</h2><span class="rule"></span></div>
   <div class="reveal">
     <div class="ach">
-      <div class="rank">Top 50</div>
+      <div class="rank">7th</div>
       <div>
-        <h3>e-Yantra Robotics Competition — IIT Bombay</h3>
-        <p>Placed in the top 50 nationally; demonstrated robust autonomous navigation stacks and optimized control algorithms.</p>
+        <h3>International Space Drone Challenge 2026</h3>
+        <p>Placed 7th internationally as team leader of a six-member team.</p>
+      </div>
+    </div>
+    <div class="ach">
+      <div class="rank">Top 20</div>
+      <div>
+        <h3>e-Yantra Robotics Competition 2026 — IIT Bombay</h3>
+        <p>Placed in the top 20 nationally as team leader; worked on PID/LQR control for physical nano-drones.</p>
       </div>
     </div>
     <div class="ach">
       <div class="rank">2nd</div>
       <div>
         <h3>Search &amp; Rescue Competition, Quark 2025 — BITS Goa</h3>
-        <p>Second place nationally in manual UAV obstacle navigation and payload delivery.</p>
+        <p>Second place nationally with the team for UAV navigation and payload delivery.</p>
       </div>
     </div>
     <div class="ach">
       <div class="rank">9th</div>
       <div>
         <h3>ICUAS UAV Competition 2025 — International</h3>
-        <p>Ninth internationally; implemented data-driven multi-UAV swarm coordination.</p>
+        <p>Ninth internationally with the team for multi-UAV autonomy and integration.</p>
       </div>
     </div>
     <div class="ach">
-      <div class="rank">Quarter-<br>finalist</div>
+      <div class="rank">4th</div>
       <div>
-        <h3>HackSpace Hackathon</h3>
-        <p>Built a full flight-planning and AI weather-briefing system from scratch in 48 hours; advanced to the quarter-finals.</p>
+        <h3>SAE Aero Design East 2026</h3>
+        <p>Team placed 4th internationally.</p>
       </div>
     </div>
   </div>
@@ -534,48 +500,41 @@ footer{
   <div class="sec-head"><span class="sec-num">06</span><h2>Technical Skills</h2><span class="rule"></span></div>
   <div class="skills-grid reveal">
     <div class="skill-block">
-      <h4>Languages</h4>
+      <h4>Programming</h4>
       <div class="chips">
-        <span class="chip">Python</span><span class="chip">C / C++</span><span class="chip">Java</span>
-        <span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">HTML / CSS</span>
+        <span class="chip">Python</span><span class="chip">C</span><span class="chip">Java</span><span class="chip">JavaScript</span>
       </div>
     </div>
     <div class="skill-block">
-      <h4>AI &amp; Data</h4>
+      <h4>Machine Learning</h4>
       <div class="chips">
-        <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span>
-        <span class="chip">JAX</span><span class="chip">XGBoost</span><span class="chip">YOLOv8</span>
-        <span class="chip">Llama</span><span class="chip">FAISS</span><span class="chip">Pandas</span>
-        <span class="chip">NumPy</span><span class="chip">scikit-learn</span><span class="chip">OpenCV</span>
+        <span class="chip">PyTorch</span><span class="chip">TensorFlow / Keras</span><span class="chip">scikit-learn</span>
+        <span class="chip">NumPy</span><span class="chip">Pandas</span>
       </div>
     </div>
     <div class="skill-block">
-      <h4>Robotics &amp; Autonomy</h4>
+      <h4>Robotics &amp; Computer Vision</h4>
       <div class="chips">
-        <span class="chip">ROS2</span><span class="chip">MAVLink / MAVSDK</span><span class="chip">Gazebo</span>
-        <span class="chip">RViz</span><span class="chip">SLAM</span><span class="chip">Kalman filtering</span>
-        <span class="chip">Sensor fusion</span><span class="chip">State estimation</span>
-        <span class="chip">Linear &amp; nonlinear control</span><span class="chip">UAV autopilots</span>
+        <span class="chip">ROS 2</span><span class="chip">Gazebo</span><span class="chip">MAVLink / MAVSDK</span>
+        <span class="chip">OpenCV</span><span class="chip">URDF/SDF</span><span class="chip">3D perception</span>
       </div>
     </div>
     <div class="skill-block">
-      <h4>Tools &amp; Deployment</h4>
+      <h4>Core Methods</h4>
       <div class="chips">
-        <span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Git</span>
-        <span class="chip">AWS</span><span class="chip">Fusion 360</span><span class="chip">3D modelling</span>
+        <span class="chip">Robot kinematics &amp; dynamics</span><span class="chip">Path / motion planning</span>
+        <span class="chip">State estimation</span><span class="chip">Kalman filtering</span>
+        <span class="chip">Signal Temporal Logic</span>
       </div>
     </div>
     <div class="skill-block">
-      <h4>CS Fundamentals</h4>
+      <h4>Tools</h4>
       <div class="chips">
-        <span class="chip">Data Structures &amp; Algorithms</span><span class="chip">OOP</span>
-        <span class="chip">DBMS</span><span class="chip">Operating Systems</span>
-        <span class="chip">Computer Networks</span><span class="chip">Embedded Systems</span>
-        <span class="chip">Information Security</span><span class="chip">Data Mining</span><span class="chip">Agile</span>
+        <span class="chip">Linux</span><span class="chip">Git</span><span class="chip">Fusion 360</span>
       </div>
     </div>
     <div class="skill-block">
-      <h4>Certifications</h4>
+      <h4>Additional Training</h4>
       <div class="chips">
         <span class="chip">Deep Learning Specialization — Coursera</span>
         <span class="chip">Machine Learning — Andrew Ng</span>
@@ -592,14 +551,24 @@ footer{
     <div class="card-top">
       <h3>B.Tech, Information Technology</h3>
     </div>
-    <p class="tl-meta">Manipal Institute of Technology (MAHE), Manipal · Jul 2023 – 2027</p>
+    <p class="tl-meta">Manipal Institute of Technology (MAHE), Manipal · 2023–2027</p>
     <p class="lead" style="font-size:14.6px;margin:0">
-      Core coursework in Data Structures &amp; Algorithms, Object-Oriented Programming, Operating
-      Systems, Database Systems, Computer Networks, Embedded Systems, Digital Systems &amp; Computer
-      Organization, Software Engineering, Information Security, Data Mining, and Engineering
-      Mathematics — with laboratory work in programming, embedded systems, network programming, and
-      system-level debugging.
+      Relevant coursework: Machine Learning, Artificial Intelligence, Deep Learning, Neural
+      Computation, Generative AI, Explainable AI, Design &amp; Analysis of Algorithms, Embedded
+      Systems, and Engineering Mathematics I–IV.
     </p>
+  </div>
+  <div class="grid p2 reveal" style="margin-top:20px">
+    <div class="card">
+      <h3>Kalman Filters &amp; Non-Linear Observers</h3>
+      <p class="tl-meta">MIT Manipal · three-day workshop</p>
+      <p class="lead" style="font-size:14.6px;margin:0">Workshop led by Dr. Ravi Banawar (IIT Bombay), focused on Kalman filtering and nonlinear observers for dynamic-system state estimation.</p>
+    </div>
+    <div class="card">
+      <h3>Advanced Guidance, Control and State Estimation</h3>
+      <p class="tl-meta">IISc Bengaluru · Jul 2025 · two-week lecture series</p>
+      <p class="lead" style="font-size:14.6px;margin:0">Covered optimal control, guidance and navigation, dynamic programming, and Kalman, Unscented, and Particle Filters. <a href="https://drive.google.com/file/d/1Zd9uxKgEv7a1-rrgvHJYOVQwrc59dVdi/view?usp=sharing" target="_blank" rel="noopener">Certificate ↗</a></p>
+    </div>
   </div>
 </div></section>
 
@@ -615,6 +584,7 @@ footer{
       <a class="btn primary" href="mailto:vaibhavkrishnabansal@gmail.com">vaibhavkrishnabansal@gmail.com</a>
       <a class="btn" href="https://github.com/VaibhavBansal05" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://linkedin.com/in/vaibhav-krishna-bansal" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=ho_fTmYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
       <a class="btn" href="Vaibhav_Krishna_Bansal.pdf" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
   </div>
@@ -624,7 +594,7 @@ footer{
 
 <footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%;gap:12px;flex-wrap:wrap">
   <span>© <span id="yr"></span> Vaibhav Krishna Bansal</span>
-  <span>Manipal, India · Built &amp; hosted on GitHub Pages</span>
+  <span>Manipal, India · Robotics &amp; machine learning portfolio</span>
 </div></footer>
 
 <script>
