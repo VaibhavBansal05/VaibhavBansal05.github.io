@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 260" role="img" aria-labelledby="title desc">
+<title id="title">Online planning loop</title><desc id="desc">Sense the scene, predict obstacle motion, generate and score trajectories, execute an action, then repeat.</desc>
+<rect width="1180" height="260" rx="22" fill="#11151f"/>
+<g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+<g fill="#172333" stroke="#416178" stroke-width="2">
+<rect x="24" y="47" width="200" height="126" rx="18"/><rect x="257" y="47" width="200" height="126" rx="18"/><rect x="490" y="47" width="200" height="126" rx="18"/><rect x="723" y="47" width="200" height="126" rx="18"/><rect x="956" y="47" width="200" height="126" rx="18"/>
+</g>
+<g fill="#e6edf3" font-size="21" font-weight="700"><text x="124" y="104">Sense</text><text x="357" y="104">Predict</text><text x="590" y="104">Plan</text><text x="823" y="104">Score rules</text><text x="1056" y="104">Act</text></g>
+<g fill="#9aa7b8" font-size="15"><text x="124" y="134">nearby obstacles</text><text x="357" y="134">moving obstacles</text><text x="590" y="134">candidate paths</text><text x="823" y="134">safety + timing</text><text x="1056" y="134">then replan</text></g>
+<g fill="#64d2ff" font-size="30" font-weight="600"><text x="241" y="119">→</text><text x="474" y="119">→</text><text x="707" y="119">→</text><text x="940" y="119">→</text></g>
+</g><path d="M1056 183v47H124v-47" fill="none" stroke="#7ee787" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="590" y="221" fill="#7ee787" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15">repeat after the robot moves</text>
+</svg>

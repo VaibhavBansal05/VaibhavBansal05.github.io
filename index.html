@@ -234,6 +234,8 @@ footer{
   .hero{padding:64px 24px 56px}
   section{padding:56px 0}
 }
+
+.project-preview{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line);border-radius:9px;margin:12px 0 16px}
 </style>
 </head>
 <body>
@@ -358,6 +360,21 @@ footer{
 <section id="projects"><div class="wrap">
   <div class="sec-head"><span class="sec-num">03</span><h2>Selected Projects</h2><span class="rule"></span></div>
   <div class="grid p2 reveal">
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Rule-Aware Robot Navigation</h3>
+        <a class="icon-link" href="mbd-stl.html">case study →</a>
+      </div>
+      <p class="tl-meta">HIRO Lab, IISc · Research in progress · Simulation</p>
+      <a href="mbd-stl.html" aria-label="View the rule-aware robot navigation case study"><img class="project-preview" src="assets/mbd-stl-level2-poster.webp" alt="Simulated car path around a wall of obstacles toward a goal" loading="lazy"></a>
+      <ul class="bullets">
+        <li>Extended Model-Based Diffusion with Signal Temporal Logic objectives for obstacle avoidance, goal reaching, and timed waypoints.</li>
+        <li>Built global-guided and fully online receding-horizon planners with sensing and dynamic-obstacle prediction.</li>
+        <li>Explore the architecture, a simulation clip, my contributions, and current limitations.</li>
+      </ul>
+      <div class="tags"><span class="tag">JAX</span><span class="tag">Motion planning</span><span class="tag">STL</span><span class="tag">Receding-horizon control</span></div>
+    </article>
 
     <article class="card">
       <div class="card-top">
