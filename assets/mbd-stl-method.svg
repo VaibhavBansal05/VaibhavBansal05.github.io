@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 456" role="img" aria-labelledby="title desc">
+<title id="title">Model-based diffusion and STL online planning</title>
+<desc id="desc">Two starting modes feed a shared online loop: observe the current state and nearby obstacles, predict moving obstacles, sample control sequences, roll them out through robot dynamics, score temporal logic objectives, refine the candidate sequence, execute a short segment, and repeat. The score uses soft penalties and does not guarantee collision avoidance.</desc>
+<rect width="1120" height="456" rx="18" fill="#11151f"/>
+<g font-family="Inter,Arial,sans-serif">
+<text x="28" y="40" fill="#64d2ff" font-size="17" font-weight="700">STARTING CONTEXT</text>
+<rect x="28" y="58" width="494" height="77" rx="12" fill="#172333" stroke="#416178" stroke-width="2"/>
+<text x="48" y="87" fill="#e6edf3" font-size="18" font-weight="700">Global-guided mode</text>
+<text x="48" y="113" fill="#9aa7b8" font-size="15">offline reference from a known static map</text>
+<rect x="598" y="58" width="494" height="77" rx="12" fill="#172333" stroke="#416178" stroke-width="2"/>
+<text x="618" y="87" fill="#e6edf3" font-size="18" font-weight="700">Fully online mode</text>
+<text x="618" y="113" fill="#9aa7b8" font-size="15">sensed obstacles and memory; no global reference</text>
+<text x="28" y="171" fill="#64d2ff" font-size="17" font-weight="700">SHARED ONLINE LOOP</text>
+<g fill="#172333" stroke="#416178" stroke-width="2">
+<rect x="28" y="190" width="236" height="100" rx="12"/>
+<rect x="304" y="190" width="236" height="100" rx="12"/>
+<rect x="580" y="190" width="236" height="100" rx="12"/>
+<rect x="856" y="190" width="236" height="100" rx="12"/>
+</g>
+<g fill="#e6edf3" font-size="18" font-weight="700">
+<text x="48" y="222">Observe</text><text x="324" y="222">Propose controls</text><text x="600" y="222">Roll out and score</text><text x="876" y="222">Refine and act</text>
+</g>
+<g fill="#9aa7b8" font-size="14">
+<text x="48" y="247">robot state, nearby hazards</text><text x="48" y="268">and obstacle predictions</text>
+<text x="324" y="247">sample short sequences</text><text x="324" y="268">around the current plan</text>
+<text x="600" y="247">simulate robot dynamics;</text><text x="600" y="268">evaluate STL objectives</text>
+<text x="876" y="247">diffusion-style updates;</text><text x="876" y="268">execute a short segment</text>
+</g>
+<g fill="#64d2ff" font-size="28" font-weight="600"><text x="273" y="249">→</text><text x="549" y="249">→</text><text x="825" y="249">→</text></g>
+<path d="M976 303v43H146v-43" fill="none" stroke="#7ee787" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="560" y="341" text-anchor="middle" fill="#7ee787" font-size="15" font-weight="600">observe the executed state and replan</text>
+<rect x="28" y="371" width="1064" height="58" rx="10" fill="#30251f" stroke="#8a6748" stroke-width="1.5"/>
+<text x="48" y="397" fill="#ffb86b" font-size="15" font-weight="700">LIMIT OF THE CURRENT METHOD</text>
+<text x="48" y="416" fill="#d9c4b1" font-size="14">STL robustness and obstacle penalties guide search; they do not certify the executed path as collision-free.</text>
+</g>
+</svg>

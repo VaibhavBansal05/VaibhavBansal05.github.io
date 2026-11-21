@@ -172,6 +172,7 @@ ul.bullets li::marker{color:var(--accent)}
 }
 .icon-link{color:var(--fg-faint);font-size:13px;font-family:var(--mono);white-space:nowrap}
 .icon-link:hover{color:var(--accent)}
+.card .small-note{font-size:13px;color:var(--fg-faint);margin:10px 0 0}
 
 /* ---------- publications ---------- */
 .pub{border-left:2px solid var(--line);padding:2px 0 2px 20px;margin-bottom:26px;transition:.2s}
@@ -347,7 +348,7 @@ footer{
       <h3>Research Intern</h3>
       <p class="tl-meta"><span class="org">Human Interaction and Robotics (HIRO) Lab</span> · IISc Bengaluru · May–Jul 2026</p>
       <ul class="bullets">
-        <li>Developed a Model-Based Diffusion planner for a non-holonomic robot, using differentiable Signal Temporal Logic (STL) robustness to optimize obstacle safety, goal reaching, and strict spatio-temporal waypoint constraints.</li>
+        <li>Developed a Model-Based Diffusion planner for a non-holonomic robot, using differentiable Signal Temporal Logic (STL) robustness to optimize obstacle avoidance, goal reaching, and time-window waypoint objectives.</li>
         <li>Designed an offline global planner with online receding-horizon control (RHC), and a fully online RHC planner for partial observability, dynamic obstacles, and incremental environment memory.</li>
         <li>Implemented time-aware local planning that brakes or loiters to meet waypoint arrival windows while refining multiple control sequences under STL objectives.</li>
       </ul>
@@ -379,7 +380,7 @@ footer{
     <article class="card">
       <div class="card-top">
         <h3>Autonomous Mobile Robot Exploration &amp; Mapping</h3>
-        <a class="icon-link" href="https://github.com/VaibhavBansal05/Agv_Perception" target="_blank" rel="noopener">code ↗</a>
+        <a class="icon-link" href="agv-exploration.html">case study →</a>
       </div>
       <p class="tl-meta">ROS 2 · Gazebo · Python · URDF/SDF</p>
       <ul class="bullets">
@@ -389,6 +390,7 @@ footer{
         <li>Tuned costmaps for narrow corridors.</li>
       </ul>
       <div class="tags"><span class="tag">ROS 2</span><span class="tag">Gazebo</span><span class="tag">SLAM</span><span class="tag">Frontier exploration</span><span class="tag">GPU LiDAR</span><span class="tag">Python</span></div>
+      <p class="small-note"><a href="https://github.com/VaibhavBansal05/Agv_Perception" target="_blank" rel="noopener">Code and configuration ↗</a></p>
     </article>
 
     <article class="card">
@@ -408,7 +410,7 @@ footer{
     <article class="card">
       <div class="card-top">
         <h3>Vision-Guided Drone Hover</h3>
-        <a class="icon-link" href="https://github.com/VaibhavBansal05/Precision_Hover_Drone" target="_blank" rel="noopener">code ↗</a>
+        <a class="icon-link" href="drone-hover.html">case study →</a>
       </div>
       <p class="tl-meta">OpenCV · ArUco · Proportional control</p>
       <ul class="bullets">
@@ -416,6 +418,7 @@ footer{
         <li>Implemented image-based visual servoing, converting marker-position error into real-time velocity commands using proportional feedback control.</li>
       </ul>
       <div class="tags"><span class="tag">UAV autonomy</span><span class="tag">OpenCV</span><span class="tag">ArUco</span><span class="tag">Visual servoing</span></div>
+      <p class="small-note"><a href="https://github.com/VaibhavBansal05/Precision_Hover_Drone" target="_blank" rel="noopener">Code and simulation ↗</a></p>
     </article>
 
   </div>

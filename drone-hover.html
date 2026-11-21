@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vision-Guided Drone Hover — Vaibhav Krishna Bansal</title>
+<meta name="description" content="A ROS 2 and Gazebo UAV case study: ArUco detection, image-based feedback and proportional velocity control for marker-guided hovering.">
+<link rel="canonical" href="https://vaibhavbansal05.github.io/drone-hover.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/case-study.css">
+</head>
+<body>
+<header class="nav"><div class="nav-inner"><a class="brand" href="index.html#top">vaibhav<span>.</span>bansal</a><nav class="nav-links" id="navlinks"><a href="index.html#projects">Projects</a><a href="#demo">Demo</a><a href="#method">Method</a><a href="#scope">Scope</a><a href="index.html#contact">Contact</a></nav><button class="menu-btn" id="menubtn" aria-label="Toggle menu">☰</button><button class="toggle" id="themebtn" aria-label="Toggle theme">◐</button></div></header>
+<main>
+<div class="wrap detail-hero"><a class="icon-link" href="index.html#projects">← All projects</a><div style="height:25px"></div><div class="eyebrow"><span class="dot"></span> Public code · UAV simulation</div>
+<h1>Vision-Guided Drone Hover</h1><p class="lead">A simulated quadcopter takes off, detects an ArUco marker through a downward camera, and uses image error as feedback to align above it while holding a target height.</p>
+<p class="detail-meta">ROS 2 · Ignition Gazebo · OpenCV</p><div class="tags"><span class="tag">Visual servoing</span><span class="tag">ArUco</span><span class="tag">Proportional control</span><span class="tag">UAV</span></div></div>
+
+<section class="detail-section" id="demo"><div class="wrap"><div class="sec-head"><span class="sec-num">01</span><h2>See the hover controller</h2><span class="rule"></span></div><div class="media-panel"><iframe class="video-frame" src="https://www.youtube-nocookie.com/embed/KsZD5R67yig" title="Vision-guided drone hover simulation" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="media-caption">Demonstration linked from the public repository. The behaviour is takeoff, marker acquisition, alignment, and hover in simulation; it does not include landing. <a href="https://youtu.be/KsZD5R67yig" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></div></div></section>
+
+<section class="detail-section" id="method"><div class="wrap"><div class="sec-head"><span class="sec-num">02</span><h2>Control loop</h2><span class="rule"></span></div><div class="method-steps">
+<div class="method-step"><span class="step-num">01 / OBSERVE</span><h3>Measure height</h3><p>A downward range sensor reports altitude. The controller compares it with a 1 m target height.</p></div>
+<div class="method-step"><span class="step-num">02 / DETECT</span><h3>Find the marker</h3><p>OpenCV detects an ArUco marker in the downward camera frame and estimates its image centre.</p></div>
+<div class="method-step"><span class="step-num">03 / COMPUTE</span><h3>Form feedback error</h3><p>The difference between marker centre and image centre becomes the horizontal alignment error.</p></div>
+<div class="method-step"><span class="step-num">04 / COMMAND</span><h3>Adjust velocity</h3><p>Proportional feedback produces bounded horizontal and vertical velocity commands, then repeats.</p></div></div>
+<div class="detail-grid" style="margin-top:24px"><div class="detail-card"><h3>Why vision feedback?</h3><p>Camera coordinates give a direct signal for centring above a visible target. The controller uses the marker only when detected and after the drone rises above its initial takeoff height.</p></div><div class="detail-card"><h3>What I implemented</h3><p>The ROS 2 controller subscribes to camera and range data, runs marker detection, computes image-plane error, and publishes velocity commands. The public repository includes the Gazebo world and launch instructions.</p></div></div></div></section>
+
+<section class="detail-section" id="scope"><div class="wrap"><div class="sec-head"><span class="sec-num">03</span><h2>Evidence and limits</h2><span class="rule"></span></div><p class="lead">This is a proportional hover controller in simulation, shown in one demonstration video. The implementation does not contain a landing phase, obstacle avoidance, or a formal safety guarantee. It is a compact example of closing the loop between camera perception and UAV control.</p><p class="small-note">Review the <a href="https://github.com/VaibhavBansal05/Precision_Hover_Drone" target="_blank" rel="noopener">public ROS 2 repository</a> for the controller and simulation setup.</p><a class="btn" href="index.html#projects">← Back to portfolio</a></div></section>
+</main>
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%;gap:12px;flex-wrap:wrap"><span>© <span id="yr"></span> Vaibhav Krishna Bansal</span><span>UAV control case study</span></div></footer>
+<script>(function(){var root=document.documentElement,btn=document.getElementById('themebtn');try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}btn.addEventListener('click',function(){var n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});var mb=document.getElementById('menubtn'),nl=document.getElementById('navlinks');mb.addEventListener('click',function(){nl.classList.toggle('open')});nl.addEventListener('click',function(e){if(e.target.tagName==='A')nl.classList.remove('open')});document.getElementById('yr').textContent=new Date().getFullYear()})();</script>
+</body></html>

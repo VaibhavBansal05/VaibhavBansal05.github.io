@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autonomous Robot Exploration and Mapping — Vaibhav Krishna Bansal</title>
+<meta name="description" content="A ROS 2 mobile robot exploration case study: SLAM, frontier selection, navigation, and the engineering fixes behind a complete simulated maze run.">
+<link rel="canonical" href="https://vaibhavbansal05.github.io/agv-exploration.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/case-study.css">
+</head>
+<body>
+<header class="nav"><div class="nav-inner"><a class="brand" href="index.html#top">vaibhav<span>.</span>bansal</a><nav class="nav-links" id="navlinks"><a href="index.html#projects">Projects</a><a href="#demo">Demo</a><a href="#method">Method</a><a href="#debugging">Engineering</a><a href="index.html#contact">Contact</a></nav><button class="menu-btn" id="menubtn" aria-label="Toggle menu">☰</button><button class="toggle" id="themebtn" aria-label="Toggle theme">◐</button></div></header>
+<main>
+<div class="wrap detail-hero"><a class="icon-link" href="index.html#projects">← All projects</a><div style="height:25px"></div><div class="eyebrow"><span class="dot"></span> Public code · ROS 2 simulation</div>
+<h1>Autonomous Robot Exploration and Mapping</h1>
+<p class="lead">A differential-drive robot maps an unknown maze, selects unexplored frontiers, and navigates to them without a preloaded map. The interesting work was making sensing, odometry, SLAM, and navigation agree well enough to complete a run.</p>
+<p class="detail-meta">Independent robotics project · ROS 2 Humble · Gazebo</p><div class="tags"><span class="tag">SLAM Toolbox</span><span class="tag">Nav2</span><span class="tag">Frontier exploration</span><span class="tag">GPU LiDAR</span></div></div>
+
+<section class="detail-section" id="demo"><div class="wrap"><div class="sec-head"><span class="sec-num">01</span><h2>Full simulated run</h2><span class="rule"></span></div>
+<div class="media-panel"><iframe class="video-frame" src="https://www.youtube-nocookie.com/embed/SPcYPO6hLzk" title="Autonomous mobile robot exploration and mapping demonstration" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="media-caption">The repository labels this a 7.5-minute autonomous exploration run in a simulated labyrinth. <a href="https://youtu.be/SPcYPO6hLzk" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></div>
+<div class="kpi-row"><div class="kpi"><strong>7.5 min</strong><span>Demonstrated simulated run</span></div><div class="kpi"><strong>20 Hz</strong><span>Control-loop rate after sensor redesign, reported in the repository</span></div><div class="kpi"><strong>0.36 m</strong><span>Corrected wheel separation used by odometry</span></div></div></div></section>
+
+<section class="detail-section" id="method"><div class="wrap"><div class="sec-head"><span class="sec-num">02</span><h2>How the system works</h2><span class="rule"></span></div>
+<div class="method-steps"><div class="method-step"><span class="step-num">01 / SENSE</span><h3>Scan the maze</h3><p>A 360° GPU LiDAR supplies obstacle ranges while the differential-drive model publishes odometry.</p></div><div class="method-step"><span class="step-num">02 / MAP</span><h3>Update SLAM</h3><p>SLAM Toolbox combines scans and odometry into an occupancy map of known, free, and unknown space.</p></div><div class="method-step"><span class="step-num">03 / CHOOSE</span><h3>Find frontiers</h3><p><code>explore_lite</code> chooses boundaries between mapped free space and unexplored cells.</p></div><div class="method-step"><span class="step-num">04 / MOVE</span><h3>Navigate and repeat</h3><p>Nav2 plans to the selected frontier; new scans reveal more space and the cycle continues.</p></div></div>
+<p class="small-note" style="margin-top:16px">The stack integrates existing ROS 2 packages. My contribution was constructing and debugging the robot, simulation, sensing and navigation configuration, and their end-to-end operation.</p></div></section>
+
+<section class="detail-section" id="debugging"><div class="wrap"><div class="sec-head"><span class="sec-num">03</span><h2>Three engineering decisions that mattered</h2><span class="rule"></span></div><div class="detail-grid">
+<div class="detail-card"><h3>Fixing distorted maps</h3><p>A configured 0.40 m wheel separation disagreed with the robot's 0.36 m joint geometry. Turns produced incorrect odometry, so successive scans were placed at the wrong angles. Matching the configuration to the geometry resolved the map shearing.</p></div>
+<div class="detail-card"><h3>Replacing the sensor pipeline</h3><p>The RGB-D-to-laserscan route was narrow in view and expensive on the available computer. Moving to GPU LiDAR removed the conversion bottleneck and restored the reported control-loop rate from 1.3 Hz to 20 Hz.</p></div>
+<div class="detail-card"><h3>Making exploration meaningful</h3><p>A wide scan could reveal the initial small maze immediately, leaving no frontier to pursue. Sight-blocking corridors kept new space hidden until the robot moved into it.</p></div>
+<div class="detail-card"><h3>Keeping navigation feasible</h3><p>Costmap inflation made narrow corridors appear blocked. I tuned the robot radius, inflation and angular speed for the maze, and removed a competing odometry transform publisher.</p></div></div></div></section>
+
+<section class="detail-section" id="status"><div class="wrap"><div class="sec-head"><span class="sec-num">04</span><h2>Evidence and scope</h2><span class="rule"></span></div><p class="lead">This is a simulated exploration demonstration and an integration and debugging case study. The video shows one run; it does not establish reliability across arbitrary maps or physical robots. The <a href="https://github.com/VaibhavBansal05/Agv_Perception" target="_blank" rel="noopener">public repository</a> contains the configuration and launch files, plus an earlier <a href="https://youtu.be/j6G66rIvci8" target="_blank" rel="noopener">development clip</a>.</p><a class="btn" href="index.html#projects">← Back to portfolio</a></div></section>
+</main>
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%;gap:12px;flex-wrap:wrap"><span>© <span id="yr"></span> Vaibhav Krishna Bansal</span><span>Robotics engineering case study</span></div></footer>
+<script>(function(){var root=document.documentElement,btn=document.getElementById('themebtn');try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}btn.addEventListener('click',function(){var n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});var mb=document.getElementById('menubtn'),nl=document.getElementById('navlinks');mb.addEventListener('click',function(){nl.classList.toggle('open')});nl.addEventListener('click',function(e){if(e.target.tagName==='A')nl.classList.remove('open')});document.getElementById('yr').textContent=new Date().getFullYear()})();</script>
+</body></html>
