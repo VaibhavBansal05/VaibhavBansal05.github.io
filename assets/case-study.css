@@ -241,7 +241,10 @@ section>.wrap::before{content:'';position:absolute;right:0;top:0;width:84px;heig
 #projects .card{background:#fafcfc;border-color:#c8d4d9}
 #publications .reveal{grid-template-columns:1fr;gap:14px}
 #publications .pub{background:#fbfaf6;padding:23px 27px;max-width:none}
-#publications .pub .lead{max-width:76ch}
+#publications .pub{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}
+#publications .pub-info,#publications .pub-detail{min-width:0}
+#publications .pub-detail{border-left:1px solid var(--line);padding-left:28px}
+#publications .pub-detail .lead{margin-top:0!important}
 #achievements .ach{background:#f7faf7}
 #skills .skill-block{background:#faf9fc}
 #education .card{background:#fcf9f7}
@@ -263,6 +266,12 @@ html[data-theme="dark"] #education{--section-accent:#e4af90}
 html[data-theme="dark"] #contact{--section-accent:#e5bf7b}
 html[data-theme="dark"] section .sec-num{color:var(--section-accent,var(--accent));border-color:var(--section-accent,var(--accent))}
 html[data-theme="dark"] #contact .sec-num{color:#e5bf7b;border-color:#e5bf7b}
+@media(max-width:900px){.nav-links{top:68px}}
+@media(max-width:850px){.hero-layout{grid-template-columns:1fr;gap:34px}}
+@media(max-width:820px){
+  #publications .pub{grid-template-columns:1fr;gap:12px}
+  #publications .pub-detail{border-left:0;border-top:1px solid var(--line);padding:13px 0 0}
+}
 @media(max-width:1000px){
   #projects .grid.p2,#education .grid.p2{grid-template-columns:1fr}
   #experience .tl{grid-template-columns:1fr}
@@ -302,6 +311,9 @@ html[data-theme="dark"] #contact .sec-num{color:#e5bf7b;border-color:#e5bf7b}
   .cta .btn{font-size:12px;padding:7px 9px}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .card-top h3{font-size:1.02rem}
+  .process-steps{grid-template-columns:1fr}
+  .process-visual{padding-bottom:14px}
+  .process-visual svg{display:none}
   #achievements .ach{display:block}
   #achievements .ach .rank{display:block;border-right:0;border-bottom:2px solid #8dbbad;padding-bottom:5px;margin-bottom:8px}
 }
