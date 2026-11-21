@@ -93,3 +93,50 @@ footer{border-top:1px solid var(--line);padding:22px 0;color:var(--fg-faint);fon
 @media(max-width:700px){.wrap{padding:0 20px}.nav-inner{padding:0 20px}.hero{padding:60px 20px 55px}section{padding:48px 0}.stats{grid-template-columns:repeat(2,1fr);gap:18px 12px;margin-top:42px}.about-grid,.grid.p2,.grid.p3,.detail-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card-top{display:block}.card-top .icon-link{display:inline-block;margin-top:6px}.detail-hero{padding:45px 0 28px}}
 @media(max-width:460px){.skills-grid{grid-template-columns:1fr}.cta .btn{flex:1 1 auto}.kv{display:block}.kv dd{text-align:left}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Project visuals and a more expressive editorial rhythm. */
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(310px,.8fr);gap:52px;align-items:center}
+.hero-copy h1 em{font-style:normal;color:var(--accent)}
+.hero-figure{margin:0;position:relative;background:#dce9e8;border:1px solid var(--line);padding:15px 15px 0;transform:rotate(1.5deg)}
+.hero-figure::before{content:'';position:absolute;top:-15px;right:24px;width:85px;height:7px;background:#b9734e;transform:rotate(-5deg)}
+.hero-figure img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;border:1px solid #c4d0d2;background:#fff}
+.hero-figure figcaption{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:12px 1px 15px;font-size:11px;color:#31515c}
+.hero-figure figcaption span{text-transform:uppercase;letter-spacing:.08em;font-weight:700;white-space:nowrap}
+.hero-figure figcaption strong{font-weight:600;text-align:right}
+.stats .stat{border-left:4px solid var(--accent);padding-left:12px}
+.stats .stat:nth-child(2){border-color:#b9734e}.stats .stat:nth-child(3){border-color:#338276}.stats .stat:nth-child(4){border-color:#a48640}
+#about{background:#fff}#projects{background:#edf3f4}#achievements{background:#f3ede6}#contact{background:#e6eef0}
+html[data-theme="dark"] #about{background:#252c32}
+html[data-theme="dark"] #projects{background:#25343a}
+html[data-theme="dark"] #achievements{background:#342f2a}
+html[data-theme="dark"] #contact{background:#26353a}
+#projects .grid.p2{gap:28px}
+#projects .card{background:var(--panel);border:1px solid var(--line);padding:22px;box-shadow:0 4px 18px rgba(28,44,50,.04)}
+.project-kicker{margin:0 0 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.project-mbd{border-top:4px solid #315d75!important}.project-mbd .project-kicker{color:#315d75}
+.project-agv{border-top:4px solid #338276!important}.project-agv .project-kicker{color:#267669}
+.project-rocket{border-top:4px solid #b9734e!important}.project-rocket .project-kicker{color:#a65e3d}
+.project-drone{border-top:4px solid #a48640!important}.project-drone .project-kicker{color:#866b2c}
+.project-preview{aspect-ratio:16/9;margin:14px 0 19px;object-fit:cover;background:#e7ebeb}
+.project-preview-plot{object-fit:contain;background:#fff;padding:8px}
+#projects .card .tags{border-top:1px solid var(--line);margin-top:18px}
+@media(max-width:850px){.hero-layout{grid-template-columns:1fr;gap:34px}.hero-figure{max-width:570px;transform:none}.hero-figure::before{display:none}}
+@media(max-width:700px){#projects .grid.p2{gap:18px}#projects .card{padding:18px}.hero-figure figcaption{display:block}.hero-figure figcaption strong{display:block;text-align:left;margin-top:3px}}
+
+/* Case study accents follow each project's subject. */
+body.case-mbd{--accent:#315d75}
+body.case-agv{--accent:#267669}
+body.case-drone{--accent:#866b2c}
+body.case-study .detail-hero{border-left:5px solid var(--accent);padding-left:24px;margin-top:46px;margin-bottom:34px}
+body.case-study .detail-hero .eyebrow{color:var(--accent)}
+body.case-study main section:nth-of-type(even){background:#eef2f1}
+html[data-theme="dark"] body.case-study main section:nth-of-type(even){background:#29363a}
+body.case-study .detail-section .sec-num{color:var(--accent);font-weight:700}
+body.case-study .method-step .step-num{color:var(--accent)}
+html[data-theme="dark"] body.case-agv{--accent:#8dcaba}
+html[data-theme="dark"] body.case-drone{--accent:#dcc17d}
+html[data-theme="dark"] .project-mbd .project-kicker{color:#9bc6dc}
+html[data-theme="dark"] .project-agv .project-kicker{color:#8dcaba}
+html[data-theme="dark"] .project-rocket .project-kicker{color:#e3a17f}
+html[data-theme="dark"] .project-drone .project-kicker{color:#dcc17d}
+@media(max-width:700px){body.case-study .detail-hero{margin-top:28px;margin-bottom:20px;padding-left:18px}}

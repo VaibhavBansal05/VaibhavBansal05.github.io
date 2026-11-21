@@ -39,8 +39,10 @@
 
 <!-- HERO -->
 <div class="wrap hero">
+  <div class="hero-layout">
+  <div class="hero-copy">
   <div class="eyebrow"><span class="dot"></span> Machine Learning · Deep Learning · Robotics</div>
-  <h1>Vaibhav Krishna<br>Bansal</h1>
+  <h1>Vaibhav Krishna<br><em>Bansal</em></h1>
   <p class="tagline">
     I work across <strong>machine learning, deep learning, and robotics</strong>, building
     systems that turn models and sensor data into decisions. My projects range from
@@ -52,6 +54,12 @@
     <a class="btn" href="https://github.com/VaibhavBansal05" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="https://www.linkedin.com/in/vaibhav-krishna-bansal-80466727b/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="mailto:vaibhavkrishnabansal@gmail.com">Email</a>
+  </div>
+  </div>
+  <figure class="hero-figure">
+    <img src="assets/mbd-stl-level2-poster.webp" alt="Simulation view of a robot planning a path around obstacles" width="960" height="540">
+    <figcaption><span>Featured work</span><strong>Online robot planning · HIRO Lab, IISc</strong></figcaption>
+  </figure>
   </div>
 
   <div class="stats reveal">
@@ -68,27 +76,14 @@
   <div class="about-grid reveal">
     <div>
       <p class="lead">
-        I'm a final-year B.Tech IT student working across <strong>machine learning, deep learning,
-        and robotics</strong>. I am especially interested in applying generative models to physical
-        decision-making: from diffusion-based planning with temporal objectives to perception-driven
-        navigation and UAV control.
+        I'm a final-year B.Tech IT student interested in how <strong>machine learning, deep learning,
+        and robotics</strong> can work together in physical systems. I like building the full path
+        from a model or sensor reading to a decision that can be tested.
       </p>
       <p class="lead">
-        At <strong>AeroMIT</strong>, I led the autonomous drone research subsystem, where I guided
-        work on UAV perception, navigation, and control for challenging, GPS-denied environments.
-        I developed ROS 2 / MAVLink workflows and Gazebo simulations for perception-driven autonomy.
-      </p>
-      <p class="lead">
-        At the <strong>HIRO Lab, IISc Bengaluru</strong>, I developed a Model-Based Diffusion planner
-        for a non-holonomic robot. Differentiable Signal Temporal Logic objectives guided obstacle
-        safety, goal reaching, and time-constrained waypoints across offline and online
-        receding-horizon planning architectures.
-      </p>
-      <p class="lead">
-        I care about measurable systems: cross-validation across unseen rockets, consistent robot
-        maps, and control loops that meet their timing targets. My first-author work at
-        <strong>IC3 2026</strong> reports physics-informed flight-phase classification from
-        GPS-derived telemetry.
+        My recent work includes generative planning at the <strong>HIRO Lab, IISc</strong>,
+        physics-informed rocket flight-phase classification, and autonomous drone research at
+        <strong>AeroMIT</strong>. The projects below show the methods, demonstrations, and limits.
       </p>
     </div>
     <aside class="about-card">
@@ -139,7 +134,8 @@
   <div class="sec-head"><span class="sec-num">03</span><h2>Selected Projects</h2><span class="rule"></span></div>
   <div class="grid p2 reveal">
 
-    <article class="card">
+    <article class="card project-mbd">
+      <p class="project-kicker">01 / Generative planning</p>
       <div class="card-top">
         <h3>Online Model-Based Diffusion with Signal Temporal Logic</h3>
         <a class="icon-link" href="mbd-stl.html">case study →</a>
@@ -154,12 +150,14 @@
       <div class="tags"><span class="tag">JAX</span><span class="tag">Motion planning</span><span class="tag">STL</span><span class="tag">Receding-horizon control</span></div>
     </article>
 
-    <article class="card">
+    <article class="card project-agv">
+      <p class="project-kicker">02 / Autonomous exploration</p>
       <div class="card-top">
         <h3>Autonomous Mobile Robot Exploration &amp; Mapping</h3>
         <a class="icon-link" href="agv-exploration.html">case study →</a>
       </div>
       <p class="tl-meta">ROS 2 · Gazebo · Python · URDF/SDF</p>
+      <a href="agv-exploration.html" aria-label="View the autonomous robot exploration case study"><img class="project-preview" src="https://i.ytimg.com/vi/SPcYPO6hLzk/hqdefault.jpg" alt="Autonomous mobile robot exploring a simulated maze" loading="lazy" width="480" height="360"></a>
       <ul class="bullets">
         <li>Built a differential-drive autonomy pipeline with online SLAM, frontier-based exploration, and navigation through an unknown labyrinth; demonstrated a 7.5-minute autonomous mapping run.</li>
         <li>Replaced a CPU-heavy RGB-D-to-laserscan pipeline with 360° GPU LiDAR, recovering control-loop frequency from 1.3 Hz to 20 Hz.</li>
@@ -170,12 +168,14 @@
       <p class="small-note"><a href="https://github.com/VaibhavBansal05/Agv_Perception" target="_blank" rel="noopener">Code and configuration ↗</a></p>
     </article>
 
-    <article class="card">
+    <article class="card project-rocket">
+      <p class="project-kicker">03 / Physics-informed ML</p>
       <div class="card-top">
         <h3>Sounding Rocket Flight-Phase Classification</h3>
         <a class="icon-link" href="https://github.com/VaibhavBansal05/soundingrocket_phase_classification" target="_blank" rel="noopener">code ↗</a>
       </div>
       <p class="tl-meta">Physics-informed ML · Basis of the <strong>IC3 2026</strong> paper · evaluated on seven rockets</p>
+      <a href="https://github.com/VaibhavBansal05/soundingrocket_phase_classification" target="_blank" rel="noopener" aria-label="View the rocket flight-phase classification repository"><img class="project-preview project-preview-plot" src="https://raw.githubusercontent.com/VaibhavBansal05/soundingrocket_phase_classification/main/outputs/plots/model_comparison.png" alt="Comparison plot from the rocket flight-phase classification project" loading="lazy"></a>
       <ul class="bullets">
         <li>Classifies flight phase — boost, coast, apogee, descent, landed — from GPS telemetry alone, with no barometric pressure sensor available.</li>
         <li><strong>PI-XGB</strong>: a physics-penalized objective that reached <strong>0.838 ± 0.112</strong> mean macro-F1 versus 0.830 for baseline XGBoost under Leave-One-Rocket-Out cross-validation.</li>
@@ -184,12 +184,14 @@
       <div class="tags"><span class="tag">Python</span><span class="tag">Keras</span><span class="tag">XGBoost</span><span class="tag">Physics-informed ML</span><span class="tag">Streaming inference</span></div>
     </article>
 
-    <article class="card">
+    <article class="card project-drone">
+      <p class="project-kicker">04 / Vision and control</p>
       <div class="card-top">
         <h3>Vision-Guided Drone Hover</h3>
         <a class="icon-link" href="drone-hover.html">case study →</a>
       </div>
       <p class="tl-meta">OpenCV · ArUco · Proportional control</p>
+      <a href="drone-hover.html" aria-label="View the vision-guided drone hover case study"><img class="project-preview" src="https://i.ytimg.com/vi/KsZD5R67yig/hqdefault.jpg" alt="Simulated drone aligning above an ArUco marker" loading="lazy" width="480" height="360"></a>
       <ul class="bullets">
         <li>Built a simulated UAV controller for autonomous takeoff, ArUco-marker detection, target alignment, and hovering above the marker.</li>
         <li>Implemented image-based visual servoing, converting marker-position error into real-time velocity commands using proportional feedback control.</li>
