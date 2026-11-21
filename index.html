@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/case-study.css?v=20261122c">
+<link rel="stylesheet" href="assets/case-study.css?v=20261122d">
 </head>
 <body>
 
@@ -366,27 +366,31 @@
 <!-- EDUCATION -->
 <section id="education"><div class="wrap">
   <div class="sec-head"><span class="sec-num">07</span><h2>Education</h2><span class="rule"></span></div>
-  <div class="card reveal" style="max-width:760px">
-    <div class="card-top">
+  <div class="education-layout reveal">
+    <div class="card education-degree">
+    <p class="education-kicker">Degree</p>
       <h3>B.Tech, Information Technology</h3>
-    </div>
     <p class="tl-meta">Manipal Institute of Technology (MAHE), Manipal · 2023–2027</p>
     <p class="lead" style="font-size:14.6px;margin:0">
       Relevant coursework: Machine Learning, Artificial Intelligence, Deep Learning, Neural
       Computation, Generative AI, Explainable AI, Design &amp; Analysis of Algorithms, Embedded
       Systems, and Engineering Mathematics I–IV.
     </p>
-  </div>
-  <div class="grid p2 reveal" style="margin-top:20px">
+    <div class="education-years" aria-hidden="true"><span>2023</span><span class="education-years-line"></span><span>2027</span></div>
+    </div>
+    <div class="education-training">
     <div class="card">
+      <p class="education-kicker">Workshop</p>
       <h3>Kalman Filters &amp; Non-Linear Observers</h3>
       <p class="tl-meta">MIT Manipal · three-day workshop</p>
       <p class="lead" style="font-size:14.6px;margin:0">Workshop led by Dr. Ravi Banawar (IIT Bombay), focused on Kalman filtering and nonlinear observers for dynamic-system state estimation.</p>
     </div>
     <div class="card">
+      <p class="education-kicker">Lecture series</p>
       <h3>Advanced Guidance, Control and State Estimation</h3>
       <p class="tl-meta">IISc Bengaluru · Jul 2025 · two-week lecture series</p>
       <p class="lead" style="font-size:14.6px;margin:0">Covered optimal control, guidance and navigation, dynamic programming, and Kalman, Unscented, and Particle Filters. <a href="https://drive.google.com/file/d/1Zd9uxKgEv7a1-rrgvHJYOVQwrc59dVdi/view?usp=sharing" target="_blank" rel="noopener">Certificate ↗</a></p>
+    </div>
     </div>
   </div>
 </div></section>
@@ -436,7 +440,18 @@
   var io=new IntersectionObserver(function(es){
     es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
   },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('.reveal, main section').forEach(function(el){io.observe(el);});
+
+  var ticking=false;
+  function updateProgress(){
+    var total=document.documentElement.scrollHeight-window.innerHeight;
+    root.style.setProperty('--scroll-progress',total>0?Math.min(1,window.scrollY/total):0);
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ticking=true;window.requestAnimationFrame(updateProgress);}
+  },{passive:true});
+  updateProgress();
 
   var links=[].slice.call(document.querySelectorAll('.nav-links a'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
