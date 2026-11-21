@@ -397,11 +397,11 @@
 <script>
 (function(){
   var root=document.documentElement, btn=document.getElementById('themebtn');
-  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  try{var s=localStorage.getItem('portfolio-theme-v2'); if(s) root.setAttribute('data-theme',s);}catch(e){}
   btn.addEventListener('click',function(){
     var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
     root.setAttribute('data-theme',n);
-    try{localStorage.setItem('theme',n);}catch(e){}
+    try{localStorage.setItem('portfolio-theme-v2',n);}catch(e){}
   });
 
   var mb=document.getElementById('menubtn'), nl=document.getElementById('navlinks');
