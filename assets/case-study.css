@@ -223,3 +223,85 @@ html[data-theme="dark"] .sec-num{color:#f0d7ab;border-color:#f0d7ab}
   @keyframes art-enter{from{opacity:0;transform:translateY(12px) rotate(1deg)}to{opacity:1;transform:translateY(0) rotate(1deg)}}
 }
 @media(prefers-reduced-motion:reduce){.hero-art{animation:none}#projects .card,.btn,.icon-link{transition:none}}
+
+/* Unified page canvas with contained section panels. */
+:root{--maxw:1240px}
+body{background:#f3f2ee}
+html[data-theme="dark"] body{background:#1e2429}
+section,body.case-study main section:nth-of-type(even){background:transparent!important;border:0;padding:16px 0}
+section::after{display:none}
+section>.wrap{position:relative;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--section-accent,var(--accent));padding:38px 44px;box-shadow:0 5px 18px rgba(27,39,44,.045)}
+section>.wrap::before{content:'';position:absolute;right:0;top:0;width:84px;height:6px;background:var(--section-accent,var(--accent))}
+.sec-head{margin-bottom:26px;padding-bottom:13px}
+.sec-num{width:30px;height:30px}
+#about,#experience,#projects,#publications,#achievements,#skills,#education,#contact{background:transparent!important}
+#about .about-card,#experience .tl-item,#projects .card,#publications .pub,#achievements .ach,#skills .skill-block,#education .card{box-shadow:none}
+#about .about-card{background:#f5f9f7}
+#experience .tl-item{background:#fbf7f3}
+#projects .card{background:#fafcfc;border-color:#c8d4d9}
+#publications .reveal{grid-template-columns:1fr;gap:14px}
+#publications .pub{background:#fbfaf6;padding:23px 27px;max-width:none}
+#publications .pub .lead{max-width:76ch}
+#achievements .ach{background:#f7faf7}
+#skills .skill-block{background:#faf9fc}
+#education .card{background:#fcf9f7}
+#contact>.wrap{background:#24384a;color:#f6f4ee;border-color:#24384a;border-left-color:#d6a85d;box-shadow:none}
+#contact .sec-head{border-bottom-color:#617582}
+#contact .contact-box{padding:0}
+body.case-study .detail-section>.wrap{padding:36px 42px}
+body.case-study .detail-section>.wrap::before{background:var(--accent)}
+body.case-study .detail-hero{margin-top:34px;margin-bottom:20px}
+html[data-theme="dark"] #about .about-card,html[data-theme="dark"] #experience .tl-item,html[data-theme="dark"] #projects .card,html[data-theme="dark"] #publications .pub,html[data-theme="dark"] #achievements .ach,html[data-theme="dark"] #skills .skill-block,html[data-theme="dark"] #education .card{background:#2b343a;border-color:#4c5b63;box-shadow:none}
+html[data-theme="dark"] #contact>.wrap{background:#263e51;border-color:#486574;border-left-color:#d6a85d}
+html[data-theme="dark"] #about{--section-accent:#87c6b7}
+html[data-theme="dark"] #experience{--section-accent:#e6a886}
+html[data-theme="dark"] #projects{--section-accent:#8cbfda}
+html[data-theme="dark"] #publications{--section-accent:#dbc17d}
+html[data-theme="dark"] #achievements{--section-accent:#91c9a3}
+html[data-theme="dark"] #skills{--section-accent:#bba4d2}
+html[data-theme="dark"] #education{--section-accent:#e4af90}
+html[data-theme="dark"] #contact{--section-accent:#e5bf7b}
+html[data-theme="dark"] section .sec-num{color:var(--section-accent,var(--accent));border-color:var(--section-accent,var(--accent))}
+html[data-theme="dark"] #contact .sec-num{color:#e5bf7b;border-color:#e5bf7b}
+@media(max-width:1000px){
+  #projects .grid.p2,#education .grid.p2{grid-template-columns:1fr}
+  #experience .tl{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .wrap{padding:0 18px}
+  .nav-inner{padding:0 16px;min-height:60px}
+  .nav-links{top:64px}
+  section,.detail-section{padding:8px 0!important}
+  section>.wrap,body.case-study .detail-section>.wrap{margin:0 10px;padding:24px 19px;border-left-width:4px;box-shadow:none}
+  .sec-head{gap:10px;margin-bottom:20px}
+  h2{font-size:clamp(1.55rem,6vw,1.9rem)}
+  .hero{padding:43px 18px 42px}
+  .hero-layout{gap:30px}
+  .hero h1{font-size:clamp(2.35rem,8vw,3.2rem);line-height:1.1}
+  .tagline{font-size:1.05rem}
+  .hero-art{max-width:420px;margin:0 auto;box-shadow:6px 6px 0 #b8d0cf}
+  .stats{gap:14px;margin-top:37px}
+  .stat b{font-size:1.35rem}
+  #about .about-card{box-shadow:none;padding:16px}
+  #projects .card{padding:17px}
+  #publications .pub{padding:19px}
+  #achievements .reveal,.skills-grid{grid-template-columns:1fr}
+  #achievements .ach{gap:12px;padding:15px}
+  body.case-study .detail-hero{margin:25px 10px 15px;padding-left:17px}
+  body.case-study .detail-hero h1{font-size:clamp(2rem,7.2vw,2.9rem)}
+  .detail-grid,.method-steps,.kpi-row{grid-template-columns:1fr}
+  .contact-links .btn{max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:430px){
+  .brand{font-size:13px}
+  .toggle,.menu-btn{width:38px;height:38px}
+  .hero h1{font-size:2.25rem}
+  .hero .eyebrow{font-size:10.5px}
+  .cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cta .btn{font-size:12px;padding:7px 9px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-top h3{font-size:1.02rem}
+  #achievements .ach{display:block}
+  #achievements .ach .rank{display:block;border-right:0;border-bottom:2px solid #8dbbad;padding-bottom:5px;margin-bottom:8px}
+}
