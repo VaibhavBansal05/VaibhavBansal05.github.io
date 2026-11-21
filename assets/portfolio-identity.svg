@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 580" role="img" aria-labelledby="title desc">
+<title id="title">Machine learning, deep learning and robotics</title>
+<desc id="desc">An editorial composition of three colored panels showing data, model layers and a planned path.</desc>
+<rect width="720" height="580" fill="#eee9df"/>
+<rect x="20" y="20" width="680" height="540" fill="#f9f7f2" stroke="#293a48" stroke-width="2"/>
+<path d="M20 70H700" stroke="#293a48" stroke-width="2"/>
+<text x="42" y="51" fill="#293a48" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="2">VKB / SELECTED PRACTICE</text>
+<text x="647" y="51" fill="#293a48" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">26</text>
+<rect x="40" y="93" width="205" height="352" fill="#d3e7e8"/>
+<rect x="257" y="93" width="205" height="352" fill="#eecdb8"/>
+<rect x="474" y="93" width="205" height="352" fill="#e4deb5"/>
+<g fill="#203a4d" font-family="Inter,Arial,sans-serif">
+<text x="58" y="126" font-size="13" font-weight="700" letter-spacing="2">01 / LEARN</text>
+<text x="275" y="126" font-size="13" font-weight="700" letter-spacing="2">02 / MODEL</text>
+<text x="492" y="126" font-size="13" font-weight="700" letter-spacing="2">03 / MOVE</text>
+</g>
+<g stroke="#547b8b" stroke-width="1" opacity=".45"><path d="M58 176H226M58 216H226M58 256H226M58 296H226M58 336H226"/><path d="M58 176V336M100 176V336M142 176V336M184 176V336M226 176V336"/></g>
+<path d="M60 315 C88 307 90 236 119 252 S163 304 181 217 S208 195 225 187" fill="none" stroke="#af5a3d" stroke-width="5" stroke-linecap="round"/>
+<g fill="#af5a3d"><circle cx="60" cy="315" r="5"/><circle cx="119" cy="252" r="5"/><circle cx="181" cy="217" r="5"/><circle cx="225" cy="187" r="5"/></g>
+<g stroke="#8d4a3b" stroke-width="3" fill="none"><path d="M280 194H438M280 255H438M280 316H438"/></g>
+<g fill="#af5a3d"><circle cx="299" cy="194" r="13"/><circle cx="354" cy="194" r="13"/><circle cx="409" cy="194" r="13"/><circle cx="326" cy="255" r="13"/><circle cx="382" cy="255" r="13"/><circle cx="354" cy="316" r="13"/></g>
+<g stroke="#8d4a3b" stroke-width="2" opacity=".8"><path d="M299 207L326 242M299 207L382 242M354 207L326 242M354 207L382 242M409 207L326 242M409 207L382 242M326 268L354 303M382 268L354 303"/></g>
+<g stroke="#487e73" stroke-width="2" fill="none"><path d="M494 189H659M494 242H659M494 295H659M517 164V347M573 164V347M629 164V347" opacity=".35"/><circle cx="536" cy="305" r="17"/><circle cx="630" cy="194" r="17"/></g>
+<path d="M536 305C575 286 540 230 585 217S617 208 630 194" fill="none" stroke="#277b70" stroke-width="6" stroke-linecap="round"/>
+<path d="M536 305l-8 -2 6 -8M630 194l-10 4 5 7" fill="none" stroke="#277b70" stroke-width="3"/>
+<g fill="#203a4d" font-family="Georgia,serif" font-size="25"><text x="58" y="409">Machine learning</text><text x="275" y="409">Deep learning</text><text x="492" y="409">Robotics</text></g>
+<path d="M40 471H679" stroke="#293a48" stroke-width="2"/>
+<g fill="#293a48" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="600"><text x="42" y="505">Models</text><text x="235" y="505">→</text><text x="288" y="505">Experiments</text><text x="469" y="505">→</text><text x="526" y="505">Decisions</text></g>
+<rect x="40" y="533" width="142" height="7" fill="#4f8494"/><rect x="182" y="533" width="184" height="7" fill="#b9734e"/><rect x="366" y="533" width="141" height="7" fill="#a48640"/><rect x="507" y="533" width="172" height="7" fill="#338276"/>
+</svg>

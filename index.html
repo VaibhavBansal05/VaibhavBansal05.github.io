@@ -56,10 +56,9 @@
     <a class="btn" href="mailto:vaibhavkrishnabansal@gmail.com">Email</a>
   </div>
   </div>
-  <figure class="hero-figure">
-    <img src="assets/mbd-stl-level2-poster.webp" alt="Simulation view of a robot planning a path around obstacles" width="960" height="540">
-    <figcaption><span>Featured work</span><strong>Online robot planning · HIRO Lab, IISc</strong></figcaption>
-  </figure>
+  <div class="hero-art" aria-hidden="true">
+    <img src="assets/portfolio-identity.svg" alt="" width="720" height="580">
+  </div>
   </div>
 
   <div class="stats reveal">
@@ -137,11 +136,20 @@
     <article class="card project-mbd">
       <p class="project-kicker">01 / Generative planning</p>
       <div class="card-top">
-        <h3>Online Model-Based Diffusion with Signal Temporal Logic</h3>
+        <h3>Online Model-Based Diffusion with Signal Temporal Logic for Robot Navigation</h3>
         <a class="icon-link" href="mbd-stl.html">case study →</a>
       </div>
       <p class="tl-meta">HIRO Lab, IISc · Research in progress · Simulation</p>
-      <a href="mbd-stl.html" aria-label="View the online model-based diffusion with Signal Temporal Logic case study"><img class="project-preview" src="assets/mbd-stl-level2-poster.webp" alt="Simulated car path around a wall of obstacles toward a goal" loading="lazy"></a>
+      <div class="process-visual" role="img" aria-label="Planning workflow: sample candidate controls, score temporal objectives, and replan online">
+        <span class="process-visual-label">Planning loop</span>
+        <div class="process-steps"><span><b>01</b> Sample</span><span><b>02</b> Score</span><span><b>03</b> Replan</span></div>
+        <svg viewBox="0 0 480 96" aria-hidden="true">
+          <path d="M10 69 C105 10 164 72 240 29 S385 56 470 20"/>
+          <path d="M10 69 C112 45 160 90 240 63 S370 25 470 20"/>
+          <path d="M10 69 C93 81 168 37 240 42 S382 42 470 20"/>
+          <circle cx="10" cy="69" r="5"/><circle cx="470" cy="20" r="7"/>
+        </svg>
+      </div>
       <ul class="bullets">
         <li>Extended Model-Based Diffusion with Signal Temporal Logic objectives for obstacle avoidance, goal reaching, and timed waypoints.</li>
         <li>Built global-guided and fully online receding-horizon planners with sensing and dynamic-obstacle prediction.</li>
