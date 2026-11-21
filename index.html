@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/case-study.css?v=20261122">
+<link rel="stylesheet" href="assets/case-study.css?v=20261122c">
 </head>
 <body>
 
@@ -39,10 +39,10 @@
 
 <!-- HERO -->
 <div class="wrap hero">
+  <div class="eyebrow"><span class="dot"></span> Machine Learning · Deep Learning · Robotics</div>
+  <h1 class="hero-title">Vaibhav Krishna <em>Bansal</em></h1>
   <div class="hero-layout">
   <div class="hero-copy">
-  <div class="eyebrow"><span class="dot"></span> Machine Learning · Deep Learning · Robotics</div>
-  <h1>Vaibhav Krishna<br><em>Bansal</em></h1>
   <p class="tagline">
     I work across <strong>machine learning, deep learning, and robotics</strong>, building
     systems that turn models and sensor data into decisions. My projects range from
@@ -432,6 +432,7 @@
 
   document.getElementById('yr').textContent=new Date().getFullYear();
 
+  root.classList.add('motion-ready');
   var io=new IntersectionObserver(function(es){
     es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
   },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
